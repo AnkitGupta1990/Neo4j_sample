@@ -1,0 +1,30 @@
+#Register Yourself
+
+<p>
+	Person Name:<input type="text" name="name" ng-model="person.name">
+<p>
+Skills
+<label ng-repeat="skill in skills">
+  <input type="checkbox" checklist-model="person.skills" checklist-value="skill.value">{{skill.text}}
+  
+</label> 
+			<p>
+	<button ng-click="savePerson(person)">Register</button>
+
+	<a href="#skills">Create  Skills</a>
+	
+	<p>
+
+<table border="1">
+<th>Name</th>
+<th>Skills</th>
+<tr ng-repeat="person in persons">
+<td>
+{{person.name}}
+</td>
+<td>
+{{person.skills}}
+</td>
+</tr>
+
+</table>
